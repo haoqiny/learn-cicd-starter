@@ -25,5 +25,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: check format
+      - name: check style
         run: test -z $(go fmt ./...)
