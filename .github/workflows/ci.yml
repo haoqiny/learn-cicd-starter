@@ -26,4 +26,4 @@ jobs:
 
     steps:
       - name: check format
-        uses: test -z $(go fmt ./...)
+        run: test -z $(go fmt ./...)
