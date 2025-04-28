@@ -28,10 +28,12 @@ jobs:
       - name: check style
         run: test -z $(go fmt ./...)
 
+      - name: check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
       - name: Install staticcheck
         uses: dominikh/staticcheck-action@v1
         with:
           version: "latest"
-
-      - name: run staticcheck
-        run: staticcheck ./...
